@@ -1,11 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Dashboard.Core.Models;
 
 namespace Dashboard.Core.Services.Interfaces;
 
 public interface INimbleClient
 {
+    /// <summary>
+    /// 加载所有的点位
+    /// </summary>
+    /// <returns></returns>
+    Task<IReadOnlyCollection<MonitorAreaQueryModel>> LoadAllPositionsAsync();
 }

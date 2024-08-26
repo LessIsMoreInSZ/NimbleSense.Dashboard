@@ -14,10 +14,6 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <ToolBar Padding="8">
-            <TextBlock VerticalAlignment="Center" Text="动作" />
-            <Button Margin="8,0" Content="导出" />
-        </ToolBar>
         <hc:PropertyGrid Grid.Row="1" SelectedObject="{Binding Model}" />
     </Grid>
 </UserControl>
