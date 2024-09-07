@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using Designer.Windows.ViewModels;
+using System.Windows;
 
 namespace Designer.Windows.Views;
 /// <summary>
@@ -15,5 +16,7 @@ public partial class MainView : Window
     {
         var toolbox = ((PrismApplication)Application.Current).Container.Resolve<ToolboxView>();
         toolbox.Show();
+
+        ((MainViewModel)DataContext).Test();
     }
 }

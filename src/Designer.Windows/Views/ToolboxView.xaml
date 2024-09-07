@@ -26,9 +26,13 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <ToolBar Padding="8">
-            <Button Content="加载" />
-            <Button Margin="8,0" Content="导出" />
+        <ToolBar Padding="8" DataContext="{Binding MenusVM}">
+            <Button Command="{Binding ImportCommand}" Content="加载" />
+            <Button
+                Margin="8,0"
+                Command="{Binding ExportCommand}"
+                Content="导出" />
+            <Button Command="{Binding ExitCommand}" Content="退出" />
         </ToolBar>
 
         <TabControl
