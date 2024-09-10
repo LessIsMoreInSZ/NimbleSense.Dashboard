@@ -20,10 +20,13 @@
             <DataTemplate x:Key="PositionTemplate">
                 <Border Margin="4,4" Style="{StaticResource BorderRegion}">
                     <StackPanel Orientation="Vertical">
-                        <WrapPanel Orientation="Horizontal">
+                        <DockPanel>
                             <TextBlock VerticalAlignment="Center" Text="{Binding PositionModel.Name}" />
-                            <Button HorizontalAlignment="Right" Content="Add" />
-                        </WrapPanel>
+                            <Button
+                                HorizontalAlignment="Right"
+                                Command="{Binding AddCommand}"
+                                Content="Add" />
+                        </DockPanel>
                         <ItemsControl ItemTemplate="{StaticResource PositionFunctionTemplate}" ItemsSource="{Binding PositionFunctions}">
                             <ItemsControl.ItemsPanel>
                                 <ItemsPanelTemplate>

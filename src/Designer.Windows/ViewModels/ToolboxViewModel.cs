@@ -14,7 +14,7 @@ public class ToolboxViewModel :BindableBase
     private readonly IEventAggregator _eventAggregator;
 
     public MenuButtonsViewModel MenusVM { get; } = new MenuButtonsViewModel();
-    public PositionsViewModel PositionsVM { get; } = new PositionsViewModel();
+    public PositionsViewModel PositionsVM { get; } 
     public SupportedControlsViewModel SupportedControlsVM { get; } = new SupportedControlsViewModel();
     public SettingsViewModel SettingsVM { get; } = new SettingsViewModel();
 
@@ -29,6 +29,8 @@ public class ToolboxViewModel :BindableBase
         LoadedCommand = new DelegateCommand(OnLoad);
 
         _eventAggregator.GetEvent<ChangeControlSettingEvent>().Subscribe(ChangeControlSettingReceived);
+
+        PositionsVM = new PositionsViewModel(_eventAggregator);
     }
 
     private async void OnLoad()
@@ -101,18 +103,20 @@ public class MenuButtonsViewModel: BindableBase
 /// </summary>
 public class PositionsViewModel : BindableBase
 {
+    private readonly IEventAggregator _eventAggregator;
+
     public ObservableCollection<AreaViewModel> AreaViewModels { get; } = new ObservableCollection<AreaViewModel>();
 
-    public PositionsViewModel() 
+    public PositionsViewModel(IEventAggregator eventAggregator) 
     {
-    
+        _eventAggregator = eventAggregator;
     }
 
     public void AddPositions(IReadOnlyCollection<MonitorAreaQueryModel> positions)
     {
         foreach (var monitorAreaQueryModel in positions)
         {
-            AreaViewModels.Add(new AreaViewModel(null, monitorAreaQueryModel));
+            AreaViewModels.Add(new AreaViewModel(_eventAggregator, monitorAreaQueryModel));
         }
     }
 }

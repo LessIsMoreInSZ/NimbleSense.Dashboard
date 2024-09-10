@@ -1,4 +1,6 @@
 ﻿using Dashboard.Core.Models;
+using Designer.Windows.Events;
+using Diagram.Common.Display.Position;
 using System.Collections.ObjectModel;
 
 namespace Designer.Windows.ViewModels.Models;
@@ -7,13 +9,12 @@ public class AreaViewModel : BindableBase
 {
     public MonitorAreaQueryModel AreaModel { get; set; }
 
-    public ObservableCollection<PositionViewModel> PositionViewModels { get; }
+    public ObservableCollection<PositionViewModel> PositionViewModels { get; } = new ObservableCollection<PositionViewModel>();
 
     public AreaViewModel(IEventAggregator eventAggregator, MonitorAreaQueryModel areaModel)
     {
         AreaModel = areaModel;
 
-        PositionViewModels = new ObservableCollection<PositionViewModel>();
         foreach (var monitorPositionQueryModel in areaModel.Positions)
         {
             PositionViewModels.Add(new PositionViewModel(eventAggregator, monitorPositionQueryModel));
@@ -37,7 +38,7 @@ public class PositionViewModel: BindableBase
 
         PositionModel = positionModel;
 
-        AddCommand = new DelegateCommand(Add, AddEnable);
+        AddCommand = new DelegateCommand(AddPosition);
 
         foreach(var position in positionModel.PositionFunctions)
         {
@@ -48,14 +49,9 @@ public class PositionViewModel: BindableBase
         }
     }
 
-    private void Add()
+    private void AddPosition()
     {
-        //_eventAggregator.GetEvent<ShowPositionEvent>().Publish(PositionModel);
-    }
-
-    private bool AddEnable()
-    {
-        return true;
+        _eventAggregator.GetEvent<AddPositionItemEvent>().Publish(new PositionItemViewModel());
     }
 }
 

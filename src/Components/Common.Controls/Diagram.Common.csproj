@@ -15,4 +15,8 @@
     <Folder Include="Display\Time\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Diagram.Core\Diagram.Core.csproj" />
+  </ItemGroup>
+
 </Project>

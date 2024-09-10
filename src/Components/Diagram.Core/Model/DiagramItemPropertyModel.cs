@@ -1,11 +1,13 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 
-namespace Dashboard.Core.Models;
+namespace Diagram.Core.Model;
 
 /// <summary>
-/// 包含控件的位置和长宽
+/// 基础控件的属性，包含控件的位置和长宽
 /// </summary>
-public class LocationPropertyModel
+public abstract class DiagramItemPropertyModel
 {
     [Category("位置")]
     [DisplayName("长度")]

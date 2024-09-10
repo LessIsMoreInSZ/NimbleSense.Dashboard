@@ -1,21 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 using System.Windows.Media;
 using System.Windows;
+using Diagram.Core.Interface;
 
 namespace Diagram.Common.Display;
 
 public class BackgroundViewModel: BindableBase
 {
-    public BackgroundPropertyModel DisplayModel { get; }
+    public BackgroundPropertyModel DisplayModel { get; } = new BackgroundPropertyModel();
+
+    public IDiagramCanvasViewModel DiagramCanvasVM { get; } = new DiagramCanvasViewModel();
 
     public BackgroundViewModel()
     {
-        DisplayModel = new BackgroundPropertyModel();
     }
 }
 
