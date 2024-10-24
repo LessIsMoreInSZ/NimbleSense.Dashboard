@@ -1,0 +1,6 @@
+@NimbleEdge.Host_HostAddress = http://localhost:5268
+
+GET {{NimbleEdge.Host_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

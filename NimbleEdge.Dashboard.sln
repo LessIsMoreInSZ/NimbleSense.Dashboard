@@ -5,7 +5,7 @@ VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{0E3DF567-3A99-4326-A923-82B641D23423}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dashboard.Core", "src\Dashboard.Core\Dashboard.Core.csproj", "{F6FF2EFB-58A7-4F94-B628-6546EACBC30B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dashboard.Core", "src\Designer\Dashboard.Core\Dashboard.Core.csproj", "{F6FF2EFB-58A7-4F94-B628-6546EACBC30B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Designer", "Designer", "{B2AA85AD-7237-4607-BD22-377D2163C23D}"
 EndProject
@@ -13,11 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Android", "Android", "{0E33
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Components", "Components", "{BE3E3BB7-1266-4B1A-BADD-C3F8384538B2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Designer.Windows", "src\Designer.Windows\Designer.Windows.csproj", "{A42DAE66-712E-435A-BF8A-1F8ABC93F7EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Designer.Windows", "src\Designer\Designer.Windows\Designer.Windows.csproj", "{A42DAE66-712E-435A-BF8A-1F8ABC93F7EF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diagram.Common", "src\Components\Common.Controls\Diagram.Common.csproj", "{7841B7CA-C930-4771-9B1F-2D70D683B1CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diagram.Common", "src\Designer\Components\Common.Controls\Diagram.Common.csproj", "{7841B7CA-C930-4771-9B1F-2D70D683B1CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diagram.Core", "src\Components\Diagram.Core\Diagram.Core.csproj", "{68F41A4A-D77B-4905-BC38-1CCCCBF7FC95}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diagram.Core", "src\Designer\Components\Diagram.Core\Diagram.Core.csproj", "{68F41A4A-D77B-4905-BC38-1CCCCBF7FC95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
