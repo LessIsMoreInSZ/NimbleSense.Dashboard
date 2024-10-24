@@ -131,8 +131,18 @@ public class SupportedControlsViewModel : BindableBase
     public SupportedControlsViewModel() 
     {
         var aa = new GroupedControlViewModel("基础控件");
-        aa.Controls.Add(new ControlViewModel("Time", ""));
+        aa.Controls.Add(new ControlViewModel("时间", "text_static.png"));
+        aa.Controls.Add(new ControlViewModel("文字", "text_static.png"));
+        aa.Controls.Add(new ControlViewModel("图片", "text_static.png"));
+        aa.Controls.Add(new ControlViewModel("图片2", "text_static.png"));
+        aa.Controls.Add(new ControlViewModel("图片3", "text_static.png"));
+
+        var bb = new GroupedControlViewModel("告警控件");
+        bb.Controls.Add(new ControlViewModel("告警记录", "text_static.png"));
+        bb.Controls.Add(new ControlViewModel("告警曲线", "text_static.png"));
+
         GroupedControls.Add(aa);
+        GroupedControls.Add(bb);
     }
 }
 

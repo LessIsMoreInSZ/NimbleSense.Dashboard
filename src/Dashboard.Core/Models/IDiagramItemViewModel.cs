@@ -1,3 +1,0 @@
-﻿namespace Dashboard.Core.Models;
-
-

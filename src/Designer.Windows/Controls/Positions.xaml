@@ -25,7 +25,7 @@
                             <Button
                                 HorizontalAlignment="Right"
                                 Command="{Binding AddCommand}"
-                                Content="Add" />
+                                Content="+" />
                         </DockPanel>
                         <ItemsControl ItemTemplate="{StaticResource PositionFunctionTemplate}" ItemsSource="{Binding PositionFunctions}">
                             <ItemsControl.ItemsPanel>
@@ -38,7 +38,7 @@
                 </Border>
             </DataTemplate>
             <DataTemplate x:Key="AreaTemplate">
-                <Expander Header="{Binding AreaModel.Name}">
+                <Expander Margin="0,0,0,8" Header="{Binding AreaModel.Name}">
                     <ItemsControl ItemTemplate="{StaticResource PositionTemplate}" ItemsSource="{Binding PositionViewModels}" />
                 </Expander>
             </DataTemplate>

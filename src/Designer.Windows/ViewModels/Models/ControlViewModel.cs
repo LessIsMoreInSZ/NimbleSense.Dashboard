@@ -16,13 +16,13 @@ public class GroupedControlViewModel : BindableBase
 
 public class ControlViewModel :BindableBase
 {
-    public string Source { get; set; }
+    public string Content { get; set; }
 
     public string Name { get; set; }
 
-    public ControlViewModel(string name, string source)
+    public ControlViewModel(string name, string content)
     {
         Name = name;
-        Source = source;
+        Content = content;
     }
 }
