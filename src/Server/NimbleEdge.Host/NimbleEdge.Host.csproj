@@ -11,4 +11,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Migrations\PostgresSQL\PostgresSQL.csproj" />
+    <ProjectReference Include="..\Modules\DeviceCenter\DeviceCenter.Infrastructure\DeviceCenter.Infrastructure.csproj" />
+    <ProjectReference Include="..\NimbleEdge.Infrastructure\NimbleEdge.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

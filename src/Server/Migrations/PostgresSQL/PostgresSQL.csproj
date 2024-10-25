@@ -7,13 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Modules\Shared\Shared\Shared.csproj" />
-    <ProjectReference Include="..\NimbleEdge.Core\NimbleEdge.Core.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Auth\" />
     <Folder Include="Identity\" />
+    <Folder Include="DeviceCenter\" />
   </ItemGroup>
 
 </Project>
